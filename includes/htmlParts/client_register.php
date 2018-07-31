@@ -18,5 +18,5 @@
 	<input class="form-control" id="client_pswd1" name="client_pswd1" type="password" placeholder="pass">
 	<label for="client_pswd2">Retaper mot de passe : </label>
 	<input class="form-control" id="client_pswd2" name="client_pswd2" type="password" placeholder="pass">
-	<input type="submit" id="client_suscribe" name="client_suscribe" class="mt-5 btn btn-info float-right" value="Inscription">
+	<input type="submit" id="client_suscribe" name="client_suscribe" class="my-5 btn btn-info float-right" value="Inscription">
 </form>

@@ -18,6 +18,7 @@
 	</head>
 
 	<?php include_once __DIR__.'/includes/database/Clients.php' ;
+	include_once __DIR__.'/includes/database/Employes.php' ;
 	require __DIR__.'/includes/medoo_init.php' ;
 	session_start() ; ?>
 
@@ -32,7 +33,6 @@
 			</div>
 		</div></div>
 
-		<!-- (wrong order but still) : if user is disconnected ($_SESSION['USER'], set in formSubmit.php, display 1. Else, display 2) -->
 		<?php if (!isset($_SESSION['USER']) && empty($_SESSION['USER'])) { ?>
 			<!-- form to create a Client. All IDs are unique! -->
 			<div class="row">
@@ -43,6 +43,12 @@
 				<div class="col-md-6 list-group-item-success">
 					<?php include __DIR__.'/includes/htmlParts/client_connect.php' ; ?>
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 list-group-item-dark">
+					<?php include __DIR__.'/includes/htmlParts/employe_register.php' ; ?>
+				</div>
+			</div>
 			<?php }
 
 			if (isset($_SESSION['USER']) && !empty($_SESSION['USER'])) { 

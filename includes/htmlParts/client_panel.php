@@ -13,7 +13,7 @@
 		<!-- button to disconnect a Client -->
 		<form action="./includes/treatments/formSubmit.php" method="post" class="form-group">
 			<legend class="mt-5 h4 text-primary">Déconnexion du compte client</legend>
-			<input type="submit" id="connected_client_disconnect" name="connected_client_disconnect" class="btn btn-primary form-control" value="Déconnection">
+			<input type="submit" id="connected_client_disconnect" name="connected_client_disconnect" class="btn btn-primary form-control" value="Déconnexion">
 		</form>
 		<!-- form to update info about Client -->
 		<form action="./includes/treatments/formSubmit.php" method="post" class="form-group">

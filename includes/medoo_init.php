@@ -19,6 +19,7 @@ $database = new Medoo([
 
 // function to get this database medoo object
 function get_database($database) {
+	$database->query('SET NAMES UTF8') ;
 	return $database ;
 }
 
@@ -35,6 +36,21 @@ class Constants {
 	const TABLE_CLIENTS_BIRTHDAY = "pupuce_client_naissance" ;
 	const TABLE_CLIENTS_CREATE = "pupuce_client_creation" ;
 	const TABLE_CLIENTS_PASS = "pupuce_client_pass" ;
+
+	const TABLE_EMPLOYES = "pupuce_employe" ;
+	const TABLE_EMPLOYES_ID = "pupuce_employe_id" ;
+	const TABLE_EMPLOYES_SURNAME = "pupuce_employe_nom" ;
+	const TABLE_EMPLOYES_NAME = "pupuce_employe_prenom" ;
+	const TABLE_EMPLOYES_EMAIL = "pupuce_employe_mail" ;
+	const TABLE_EMPLOYES_ADDRESS = "pupuce_employe_adresse" ;
+	const TABLE_EMPLOYES_POSTAL = "pupuce_employe_cp" ;
+	const TABLE_EMPLOYES_TOWN = "pupuce_employe_ville" ;
+	const TABLE_EMPLOYES_BIRTHDAY = "pupuce_employe_naissance" ;
+	const TABLE_EMPLOYES_POSITION = "pupuce_employe_fonction" ;
+	const TABLE_EMPLOYES_WAGES = "pupuce_employe_salaire" ;
+	const TABLE_EMPLOYES_BOSS_ID = "pupuce_employe_id_boss" ;
+	const TABLE_EMPLOYES_SECU = "pupuce_employe_secu" ;
+
 }
 
 /************************(unused) Encryption system for sensible data****************************/

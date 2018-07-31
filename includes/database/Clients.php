@@ -15,6 +15,8 @@ class Clients extends Personnes implements CRUD {
 		return $this->_creation ;
 	}
 
+	// all CRUD functions take array $data as an argument, since we want to cover all kinds of cases
+	// it should be an associative array taking the right indexes to work correctly
 	public function dataRead(array $data) {
 		$res = get_database($data['DATABASE'])->get(Constants::TABLE_CLIENTS, [
 			Constants::TABLE_CLIENTS_ID,

@@ -9,10 +9,10 @@ progression rate : +/- 4hrs/working day
 
 --calendar--  
 *25-Jul-2018::Creating Employe, Fournisseur and Client databases, creating CRUD interface, Personnes, Clients, Employes, Fournisseurs Class  
-*26-Jul-2018::First features in Clients class, some changes to be made  
-*27-Jul-2018::First big bug, adding Produit, Fournisseur, FournisseurProduit, Commande databases  
-*30-Jul-2018::Last fixes to Clients with changing a bit method expressions and arguments  
-*31-Jul-2018::Starting all Employes methods, heavy copy/pasting session then changing all the necessary fields  
+*26-Jul-2018::First features in Clients class, including the dataRead method, some changes to be made  
+*27-Jul-2018::First big bug, adding Produit, Fournisseur, FournisseurProduit, Commande databases, finding a way to use session_start and session_end to connnect/disconnect Client  
+*30-Jul-2018::Last fixes to Clients with changing a bit method expressions and arguments :: course about sessions  
+*31-Jul-2018::Starting all Employes methods, heavy copy/pasting session then changing all the necessary fields :: course about associating class/instances to database operations  
 *01-Aug-2018::Continued Employes methods. A second bug is fixed, the bug was happening because of wrong table call. FrontEnd, form to connect an Employe by his n° secu (not hashed). Hopefully adding boards to manage Fournisseurs and Produits  
 
 class diagram is provided by the coach  
@@ -26,8 +26,8 @@ features :
 >>> Client (user) car create an account, connect account session, disconnect account session, delete their account, update their account  
 **TODO on this** --- the Client must be able to see his Panier and also a selection of Produits. A front-end interface is there already, but it's empty
 
->>> Employe (user) can create an account, connect account session, disconnect account session, delete their account, update their account  
-**TODO on this** --- the Employe must be able to visualize and manage Fournisseur and Produits list  
+>>> Employe (user) can create an account, connect account session, disconnect account session, delete their account  
+**TODO on this** --- the Employe must be able to visualize and manage Fournisseur and Produits list. The Update form has not been implemented (to keep time to go on different targets), but the update method is available.  
 
 >>> index.php has a Client Suscribe form, Client Connect form, Employe suscribe form, Employe Connect form, when Client or Employe is connected, the session is opened, and program switches to a different display (see above)  
 

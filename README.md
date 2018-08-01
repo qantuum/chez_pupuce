@@ -16,10 +16,10 @@ database user credentials have to be changed in the file './includes/credentials
 features :  
 
 >>> Client (user) car create an account, connect account session, disconnect account session, delete their account, update their account  
-**TODO on this** --- the client must be able to see his Panier and also a selection of Produits. A front-end interface is there already, but it's empty
+**TODO on this** --- the Client must be able to see his Panier and also a selection of Produits. A front-end interface is there already, but it's empty
 
 >>> Employe (user) can create an account, connect account session, disconnect account session, delete their account, update their account  
-**TODO on this** --- the employee must be able to visualize and manage fournisseur and produits list  
+**TODO on this** --- the Employe must be able to visualize and manage Fournisseur and Produits list  
 
 >>> index.php has a Client Suscribe form, Client Connect form, Employe suscribe form, Employe Connect form, when Client or Employe is connected, the session is opened, and program switches to a different display (see above)  
 

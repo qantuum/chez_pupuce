@@ -7,6 +7,14 @@ Created 25-Jul-2018
 challenge deadline : 03-Aug-2018  
 progression rate : +/- 4hrs/working day  
 
+--calendar--  
+*25-Jul-2018::Creating Employe, Fournisseur and Client databases, creating CRUD interface, Personnes, Clients, Employes, Fournisseurs Class  
+*26-Jul-2018::First features in Clients class, some changes to be made  
+*27-Jul-2018::First big bug, adding Produit, Fournisseur, FournisseurProduit, Commande databases  
+*30-Jul-2018::Last fixes to Clients with changing a bit method expressions and arguments  
+*31-Jul-2018::Starting all Employes methods, heavy copy/pasting session then changing all the necessary fields  
+*01-Aug-2018::Continued Employe methods. A second bug is fixed, the bug was happening because of wrong table call. FrontEnd, form to connect an Employe by his n° secu (not hashed). Hopefully adding boards to manage Fournisseurs and Produits  
+
 class diagram is provided by the coach  
 
 please add database in localhost  

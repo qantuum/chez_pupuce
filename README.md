@@ -13,7 +13,7 @@ progression rate : +/- 4hrs/working day
 *27-Jul-2018::First big bug, adding Produit, Fournisseur, FournisseurProduit, Commande databases  
 *30-Jul-2018::Last fixes to Clients with changing a bit method expressions and arguments  
 *31-Jul-2018::Starting all Employes methods, heavy copy/pasting session then changing all the necessary fields  
-*01-Aug-2018::Continued Employe methods. A second bug is fixed, the bug was happening because of wrong table call. FrontEnd, form to connect an Employe by his n° secu (not hashed). Hopefully adding boards to manage Fournisseurs and Produits  
+*01-Aug-2018::Continued Employes methods. A second bug is fixed, the bug was happening because of wrong table call. FrontEnd, form to connect an Employe by his n° secu (not hashed). Hopefully adding boards to manage Fournisseurs and Produits  
 
 class diagram is provided by the coach  
 

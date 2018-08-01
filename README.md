@@ -20,3 +20,9 @@ features :
 **WIP on this** --- the employee must be able to visualize and manage fournisseur and produits list  
 
 >>> index.php has a Client Suscribe form, Client Connect form, Employe suscribe form, Employe Connect form, when Client or Employe is connected, the session is opened, and program switches to a different display (see above)  
+
+frameworks :  
+
+* Medoo (database management in PHP)  
+* Bootstrap (frontEnd design)  
+* jQuery (unused)  

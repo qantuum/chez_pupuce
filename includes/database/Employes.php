@@ -10,7 +10,7 @@ class Employes extends Personnes implements CRUD {
 	// getters -- extends
 	// methods
 	public function dataRead(array $data) {
-		$res = get_database($data['DATABASE'])->get(Constants::TABLE_CLIENTS, [
+		$res = get_database($data['DATABASE'])->get(Constants::TABLE_EMPLOYES, [
 			Constants::TABLE_EMPLOYES_ID,
 			Constants::TABLE_EMPLOYES_NAME,
 			Constants::TABLE_EMPLOYES_SURNAME,

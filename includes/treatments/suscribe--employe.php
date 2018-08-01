@@ -45,7 +45,7 @@
 			}
 
 			// check if e-mail address does not already exists !!! uses dataRead() method
-			if ($employe->dataRead(array('DATABASE'=>$database,'KEY'=>'pupuce_employe_mail','VALUE'=>$_POST['employe_email']))) {
+			if ($employe->dataRead(array('DATABASE'=>$database,'KEY'=>'pupuce_employe_mail','VALUE'=>$_POST['employe_email']))!=0) {
 				echo '<div class="alert alert-danger">error()::employe_email_already_exists,<a href="../../index.php">back</a></div>';
 			}
 			else {
@@ -53,7 +53,7 @@
 			}
 
 			// check if n°secu does not already exists !!! uses dataRead() method
-			if ($employe->dataRead(array('DATABASE'=>$database,'KEY'=>'pupuce_employe_secu','VALUE'=>$_POST['employe_secu']))) {
+			if ($employe->dataRead(array('DATABASE'=>$database,'KEY'=>'pupuce_employe_secu','VALUE'=>$_POST['employe_secu']))!=0) {
 				echo '<div class="alert alert-danger">error()::employe_secu_already_exists,<a href="../../index.php">back</a></div>';
 			}
 			else {

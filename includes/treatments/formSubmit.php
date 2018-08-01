@@ -27,10 +27,9 @@
 		</div></div>
 
 		<?php
-
+		require dirname(__DIR__).'/medoo_init.php';
 		include_once '../database/Clients.php' ;
 		include_once '../database/Employes.php';
-		require dirname(__DIR__).'/medoo_init.php';
 		include_once __DIR__.'/FormChecks.php';
 
 		
@@ -49,6 +48,9 @@
 
 		/*************************** treatment suscribe Employe form ****************************/
 		include_once __DIR__.'/suscribe--employe.php';
+
+		/*************************** treatment connect/disconnect Employe form ****************************/
+		include_once __DIR__.'/(dis)connect--employe.php';
 
 		?>
 

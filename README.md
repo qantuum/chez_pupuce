@@ -32,7 +32,7 @@ features :
 
 >>> **security** : no focus has been done on security, since the exercise consists more in creating and managing databases, using OOP. Some simple tests are performed for checking stuff (i.e e-mail address can appear only once in db, postal code must be 5 characters long, passwd1 and passwd2 must be the same). The **TODOS on this** would consist on adding a pregmatch for every field in PHP, as well as building security blocks with the available tools in JS and HTML (warning on client-side if a form error appears). Nevertheless, the use of the Medoo framework is a sure way to avoid SQL injections, since Medoo uses an API to give instructions to SQL.  
 
->> **frontEnd and actual data** : no focus has been done on frontEnd design, user experience, nor realistic data. All is revolving around the database.  
+>>> **frontEnd and actual data** : no focus has been done on frontEnd design, user experience, nor realistic data. All is revolving around the database.  
 
 frameworks :  
 

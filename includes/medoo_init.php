@@ -51,6 +51,18 @@ class Constants {
 	const TABLE_EMPLOYES_BOSS_ID = "pupuce_employe_id_boss" ;
 	const TABLE_EMPLOYES_SECU = "pupuce_employe_secu" ;
 
+	const TABLE_FOURNISSEURS = "pupuce_fournisseur" ;
+	const TABLE_FOURNISSEURS_ID = "pupuce_fournisseur_id" ;
+	const TABLE_FOURNISSEURS_SURNAME = "pupuce_fournisseur_nom" ;
+	const TABLE_FOURNISSEURS_NAME = "pupuce_fournisseur_prenom" ;
+	const TABLE_FOURNISSEURS_EMAIL = "pupuce_fournisseur_mail" ;
+	const TABLE_FOURNISSEURS_ADDRESS = "pupuce_fournisseur_adresse" ;
+	const TABLE_FOURNISSEURS_POSTAL = "pupuce_fournisseur_cp" ;
+	const TABLE_FOURNISSEURS_TOWN = "pupuce_fournisseur_ville" ;
+	const TABLE_FOURNISSEURS_BIRTHDAY = "pupuce_fournisseur_naissance" ;
+	const TABLE_FOURNISSEURS_CREATE = "pupuce_fournisseur_creation" ;
+	const TABLE_FOURNISSEURS_COMPTABLE = "pupuce_fournisseur_code_compt" ;
+
 }
 
 /************************(unused) Encryption system for sensible data****************************/

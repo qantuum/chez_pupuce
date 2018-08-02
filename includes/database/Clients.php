@@ -17,6 +17,26 @@ class Clients extends Personnes implements CRUD {
 
 	// all CRUD functions take array $data as an argument, since we want to cover all kinds of cases
 	// it should be an associative array taking the right indexes to work correctly
+
+	// this function needs a very specific associative array, then inserts the data to the table
+	public function dataNew(array $data) {
+		get_database($data['DATABASE'])->insert(Constants::TABLE_CLIENTS, [
+			Constants::TABLE_CLIENTS_NAME => $data['NAME'],
+			Constants::TABLE_CLIENTS_SURNAME => $data['SURNAME'],
+			Constants::TABLE_CLIENTS_EMAIL => $data['EMAIL'],
+			Constants::TABLE_CLIENTS_ADDRESS => $data['ADDRESS'],
+			Constants::TABLE_CLIENTS_POSTAL => $data['POSTAL'],
+			Constants::TABLE_CLIENTS_TOWN => $data['TOWN'],
+			Constants::TABLE_CLIENTS_BIRTHDAY => $data['BIRTHDAY'],
+			Constants::TABLE_CLIENTS_CREATE => $data['CREATE'],
+			Constants::TABLE_CLIENTS_PASS => $data['PASS']
+		]) ;
+		$id = get_database($data['DATABASE'])->id();
+		return isset($id);
+
+	}
+	
+	// the __set method is used to attribute the implemented data to my instance, for use in further operations
 	public function dataRead(array $data) {
 		$res = get_database($data['DATABASE'])->get(Constants::TABLE_CLIENTS, [
 			Constants::TABLE_CLIENTS_ID,
@@ -44,23 +64,15 @@ class Clients extends Personnes implements CRUD {
 		return $res ;
 	}
 
-	public function dataNew(array $data) {
-		get_database($data['DATABASE'])->insert(Constants::TABLE_CLIENTS, [
-			Constants::TABLE_CLIENTS_NAME => $data['NAME'],
-			Constants::TABLE_CLIENTS_SURNAME => $data['SURNAME'],
-			Constants::TABLE_CLIENTS_EMAIL => $data['EMAIL'],
-			Constants::TABLE_CLIENTS_ADDRESS => $data['ADDRESS'],
-			Constants::TABLE_CLIENTS_POSTAL => $data['POSTAL'],
-			Constants::TABLE_CLIENTS_TOWN => $data['TOWN'],
-			Constants::TABLE_CLIENTS_BIRTHDAY => $data['BIRTHDAY'],
-			Constants::TABLE_CLIENTS_CREATE => $data['CREATE'],
-			Constants::TABLE_CLIENTS_PASS => $data['PASS']
-		]) ;
-		$id = get_database($data['DATABASE'])->id();
-		return isset($id);
-
+	// delete the requested data line. The $data['ID'] can be retrieved from instance Employes after a dataRead()
+	public function dataDelete(array $data) {
+		$res = get_database($data['DATABASE'])->delete(Constants::TABLE_CLIENTS, [
+			Constants::TABLE_CLIENTS_ID => $data['ID']
+		]);
+			return isset($res) ;
 	}
 
+	// a different system than in dataNew, since we do NOT want to trigger an error whenever a field is missing. The fact of adding an array and to treat it with foreach, will onl affect the relative fields.
 	public function dataUpdate(array $data) {
 		$res=array();
 		foreach ($data['ARRAY_UPD'] as $key => $item) {
@@ -73,13 +85,7 @@ class Clients extends Personnes implements CRUD {
 			return isset($res) ;
 	}
 
-	public function dataDelete(array $data) {
-		$res = get_database($data['DATABASE'])->delete(Constants::TABLE_CLIENTS, [
-			Constants::TABLE_CLIENTS_ID => $data['ID']
-		]);
-			return isset($res) ;
-	}
-
+	// the function password_verify compares two hashed passwords
 	public function authentification($pswd) {
 		if (password_verify($pswd, $this->_hashed_pswd)) {
 			return true ;

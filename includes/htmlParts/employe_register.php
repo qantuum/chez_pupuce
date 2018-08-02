@@ -28,5 +28,5 @@
 	<input class="form-control" id="employe_wages" name="employe_wages" type="number" placeholder="1300">
 	<label for="employe_boss_id">Supérieur : </label>
 	<input class="form-control" id="employe_boss_id" name="employe_boss_id" type="number" placeholder="1">
-	<input type="submit" id="employe_suscribe" name="employe_suscribe" class="my-5 btn btn-info float-right" value="Inscription">
+	<input type="submit" id="employe_suscribe" name="employe_suscribe" class="my-5 btn btn-dark float-right" value="Inscription">
 </form>

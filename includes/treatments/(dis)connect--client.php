@@ -15,7 +15,7 @@
 				echo '<div class="alert alert-success">account()::connected,<a href="../../index.php">back</a></div>';
 			}
 			else {
-				echo '<div class="alert alert-danger">error()::bad_authentification<a href="../../index.php">back</a></div>';
+				echo '<div class="alert alert-danger">error()::bad_authentification,<a href="../../index.php">back</a></div>';
 			}
 		}
 

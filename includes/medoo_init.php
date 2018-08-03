@@ -63,6 +63,13 @@ class Constants {
 	const TABLE_FOURNISSEURS_CREATE = "pupuce_fournisseur_creation" ;
 	const TABLE_FOURNISSEURS_COMPTABLE = "pupuce_fournisseur_code_compt" ;
 
+	const TABLE_PRODUITS = "pupuce_produit" ;
+	const TABLE_PRODUITS_ID = "pupuce_produit_id" ;
+
+	const TABLE_FOURNISSEURS_JOINT_PRODUITS = "pupuce_produit_fournisseur" ;
+	const TABLE_FOURNISSEURS_JOINT_PRODUITS_P_ID = "pupuce_produit_primary_id" ;
+	const TABLE_FOURNISSEURS_JOINT_PRODUITS_F_ID = "pupuce_fournisseurs_index_id" ;
+
 }
 
 /************************(unused) Encryption system for sensible data****************************/

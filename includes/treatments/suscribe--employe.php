@@ -9,6 +9,7 @@
 			$new_email_ok=0;
 			$position_ok=0;
 			$new_secu_ok=0;
+			$secu_ok=0;
 			// create a new employe to be able to run methods anytime
 			$employe= new Employes() ;
 
@@ -52,8 +53,21 @@
 				$new_email_ok=1 ;
 			}
 
+			// check if n°secu is well formatted !!!
+			// _failed to find the right conditions for digit control
+			// was something the likes of ($_POST['employe_secu'][0]<1 && $_POST['employe_secu'][0]<4 && ... ...) {
+			// code echo error }
+			if (strlen($_POST['employe_secu'])!=15) {
+				echo '<div class="alert alert-danger">error()::employe_secu_bad_format,<a href="../../index.php">back</a></div>';
+			}
+			else {
+				$secu_ok=1;
+				$check_new_secu=$_POST['employe_secu'];
+			}
+
 			// check if n°secu does not already exists !!! uses dataRead() method
-			if ($employe->dataRead(array('DATABASE'=>$database,'KEY'=>'pupuce_employe_secu','VALUE'=>$_POST['employe_secu']))!=0) {
+			global $check_new_secu;
+			if ($employe->dataRead(array('DATABASE'=>$database,'KEY'=>'pupuce_employe_secu','VALUE'=>$check_new_secu))!=0) {
 				echo '<div class="alert alert-danger">error()::employe_secu_already_exists,<a href="../../index.php">back</a></div>';
 			}
 			else {
@@ -61,7 +75,7 @@
 			}
 
 			//final check ::: if all conditions are set to 1, we can create the new employe using dataNew
-			if ($position_ok==1 && $postal_ok==1 && $all_fill_ok==1 && $new_email_ok==1 && $new_secu_ok==1) {
+			if ($position_ok==1 && $postal_ok==1 && $all_fill_ok==1 && $new_email_ok==1 && $new_secu_ok==1 && $secu_ok==1) {
 				echo '<div class="alert alert-success">OK()::suscription_ok,';
 				$employe->dataNew(array('NAME'=>$_POST['employe_name'],
 										'SURNAME'=>$_POST['employe_surname'],

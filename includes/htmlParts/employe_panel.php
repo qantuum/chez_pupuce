@@ -72,3 +72,46 @@
 
 	</div>		
 </div>
+
+<!-- Employe panel to see Produits table (with inner joint to show Fournisseurs name -->
+<div class="row">
+	<div class="col-md-12 list-group-item-danger table-responsive">
+		<h4 class="h4 text-dark text-center my-5">Liste des Produits</h4>
+		<table class="table table-striped table-warning table-hover display">
+			<!-- table start -->
+			<thead class="thead thead-light">
+				<tr>
+					<th>id produit</th>
+					<th>Thumbnail</th>
+					<th>Prix (€)</th>
+					<th>Qté. Dispo</th>
+					<th>Nom Fournisseur</th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php
+				// I create a new Fournisseurs and I retrieve the data from db
+				$produit=new Produits() ;
+				$allProduits=$produit->dataReadAll($database);
+				// I show my result in the table using a for loop
+				for ($i=0;$i<count($allProduits);$i++) {
+					echo 	'
+								<tr>
+									<th>'.$allProduits[$i]['pupuce_produit_primary_id'].'</th>
+									<td><img class="img-thumbnail" src="'.$allProduits[$i]['pupuce_produit_image'].'" alt="img" style="max-width:6.5rem;max-height:auto"></td>
+									<td>'.$allProduits[$i]['pupuce_produit_prix'].'</td>
+									<td>'.$allProduits[$i]['pupuce_produit_stock'].'</td>
+									<td>'.$allProduits[$i]['pupuce_fournisseur_nom'].'</td>
+								</tr>
+							' ;
+				}
+			?>
+			</tbody>
+		</table>
+
+	</div>		
+</div>
+<?php 
+// echo '<pre>';
+// var_dump($allProduits);
+// echo '</pre>';

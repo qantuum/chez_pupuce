@@ -24,7 +24,8 @@
 	<?php include_once __DIR__.'/includes/database/Clients.php' ;
 	include_once __DIR__.'/includes/database/Employes.php' ;
 	include_once __DIR__.'/includes/database/Fournisseurs.php' ;
-	require __DIR__.'/includes/medoo_init.php' ; //__DIR__ iz the name of the source directory
+	include_once __DIR__.'/includes/database/Produits.php' ;
+	require __DIR__.'/includes/medoo_init.php' ; // __DIR__ iz the name of the source directory
 	session_start() ; ?>
 
 	<body>
@@ -75,8 +76,6 @@
 		<script src='cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'></script>
 	</body>
 </html>
-
-
 
 
 

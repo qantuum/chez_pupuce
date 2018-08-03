@@ -7,12 +7,14 @@ abstract class Personnes {
 	// attributes
 	protected $_id, $_name, $_surname, $_email, $_address, $_postal, $_town, $_birthday, $_database ;
 
-	// getters
+	// constructor -- none
+
+	// getter
 	public function __get($attr) {
 		return $this->$attr ;
 	}
 
-	// setters
+	// setter
 	public function __set($attr, $val) {
 		$this->$attr = $val ;
 	}

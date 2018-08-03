@@ -9,7 +9,7 @@
 
 <!-- my three forms in one div -->
 <div class="row">
-	<div class="col-md-6 list-group-item-secondary" style="border:0.025rem solid blue; overflow:scroll; max-height:30rem;">
+	<div class="col-md-6 list-group-item-secondary" style="border:0.025rem solid blue; overflow:scroll; max-height:50rem;">
 		<!-- button to disconnect a Client -->
 		<form action="./includes/treatments/formSubmit.php" method="post" class="form-group">
 			<legend class="mt-5 h4 text-primary">Déconnexion du compte client</legend>
@@ -50,7 +50,7 @@
 	<!-- Client panel including Cart and Product selection ! -->
 	<div class="col-md-6">
 		<div class="row">
-			<div class="col-md-12 list-group-item-primary" style="border:0.025rem solid grey; overflow:scroll; max-height:10rem">
+			<div class="col-md-12 list-group-item-primary" style="border:0.025rem solid grey; overflow:scroll; max-height:20rem">
 				<h4 class="h4 text-center mt-4">Mon panier</h4>
 				<ul class="list-group m-3">
 					<li class="list-group-item list-group-item-primary">
@@ -72,43 +72,29 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 list-group-item-warning" style="border:0.025rem solid grey; overflow:scroll; max-height:20rem">
+			<div class="col-md-12 list-group-item-warning" style="border:0.025rem solid grey; overflow:scroll; max-height:30rem">
 				<h4 class="h4 text-center my-4">Sélection de produits</h4>
 
 				<div class="row d-flex flex-row flew-wrap">
+					<?php
 
-					<div class="card col-4" style="width: 18rem;">
-						<img class="card-img-top" src="http://via.placeholder.com/200x200" alt="Card image cap">
-						<div class="card-body">
-					    	<h4 class="card-title">Produit</h4>
-					    	<h5 class="card-title h5">Prix : 12.00 €</h5>
-					    	<p class="card-text">Le produit du produit le plus beau de tous les produiduits.</p>
-						</div>
-					</div>
-					<div class="card col-4" style="width: 18rem;">
-						<img class="card-img-top" src="http://via.placeholder.com/200x200" alt="Card image cap">
-						<div class="card-body">
-					    	<h4 class="card-title">Produit</h4>
-					    	<h5 class="card-title h5">Prix : 12.00 €</h5>
-					    	<p class="card-text">Le produit du produit le plus beau de tous les produiduits.</p>
-						</div>
-					</div>
-					<div class="card col-4" style="width: 18rem;">
-						<img class="card-img-top" src="http://via.placeholder.com/200x200" alt="Card image cap">
-						<div class="card-body">
-					    	<h4 class="card-title">Produit</h4>
-					    	<h5 class="card-title h5">Prix : 12.00 €</h5>
-					    	<p class="card-text">Le produit du produit le plus beau de tous les produiduits.</p>
-						</div>
-					</div>
-					<div class="card col-4" style="width: 18rem;">
-						<img class="card-img-top" src="http://via.placeholder.com/200x200" alt="Card image cap">
-						<div class="card-body">
-					    	<h4 class="card-title">Produit</h4>
-					    	<h5 class="card-title h5">Prix : 12.00 €</h5>
-					    	<p class="card-text">Le produit du produit le plus beau de tous les produiduits.</p>
-						</div>
-					</div>
+					// I create a new Fournisseurs and I retrieve the data from db
+					$allProduits=Produits::dataReadAll($database);
+					// I show my result in the field using a for loop
+					for ($i=0;$i<count($allProduits);$i++) {
+						echo    '<div class="card col-4" style="width: 18rem;">
+									<img class="card-img-top" src="'.$allProduits[$i]['pupuce_produit_image'].'" alt="Card image cap">
+									<div class="card-body">
+								    	<h4 class="card-title">'.$allProduits[$i]['pupuce_produit_nom'].'</h4>
+								    	<h4 class="card-title">Edité par : '.$allProduits[$i]['pupuce_fournisseur_nom'].'</h4>
+								    	<h5 class="card-title h5">Prix : '.$allProduits[$i]['pupuce_produit_prix'].' €</h5>
+								    	<p class="card-text">'.$allProduits[$i]['pupuce_produit_description'].'</p>
+								    	<button class="btnAddProduct btn btn-success btn-sm float-right"><span class="fas fa-star"></span> ZE LE VEU</button>
+									</div>
+								</div>' ;
+					}
+
+					?>
 
 
 				</div>

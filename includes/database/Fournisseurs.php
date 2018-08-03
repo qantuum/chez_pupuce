@@ -54,7 +54,7 @@ class Fournisseurs extends Personnes implements CRUD {
 		return $res ;
 	}
 
-	public function dataReadAll($database) {
+	public static function dataReadAll($database) {
 		$array = get_database($database)->select(Constants::TABLE_FOURNISSEURS, "*") ;
 		return $array ;
 	}

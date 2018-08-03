@@ -35,6 +35,10 @@
 		include_once __DIR__.'/FormChecks.php';
 
 		
+		/*************************** in case client refreshes the page ****************************/
+		if (!isset($_POST) || empty($_POST)) {
+			echo '<div class="alert alert-warning">notice()::please_do_not_refresh_this_page,<a href="../../index.php">back</a></div>';
+		}
 
 		/*************************** treatment suscribe Client form ****************************/
 		include_once __DIR__.'/suscribe--client.php';

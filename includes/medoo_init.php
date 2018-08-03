@@ -19,6 +19,7 @@ $database = new Medoo([
 
 // function to get this database medoo object
 function get_database($database) {
+	// set utf-8 encoding for all my db
 	$database->query('SET NAMES UTF8') ;
 	return $database ;
 }
@@ -65,14 +66,21 @@ class Constants {
 
 	const TABLE_PRODUITS = "pupuce_produit" ;
 	const TABLE_PRODUITS_ID = "pupuce_produit_id" ;
+	const TABLE_PRODUITS_NAME = "pupuce_produit_nom" ;
+	const TABLE_PRODUITS_DESCR = "pupuce_produit_description" ;
+	const TABLE_PRODUITS_IMG_SRC = "pupuce_produit_image" ;
+	const TABLE_PRODUITS_PRIX = "pupuce_produit_prix" ;
+	const TABLE_PRODUITS_STOCK = "pupuce_produit_stock" ;
 
 	const TABLE_FOURNISSEURS_JOINT_PRODUITS = "pupuce_produit_fournisseur" ;
 	const TABLE_FOURNISSEURS_JOINT_PRODUITS_P_ID = "pupuce_produit_primary_id" ;
 	const TABLE_FOURNISSEURS_JOINT_PRODUITS_F_ID = "pupuce_fournisseurs_index_id" ;
+	const TABLE_FOURNISSEURS_JOINT_PRODUITS_P_QTE = "pupuce_produit_quantite" ;
 
 }
 
 /************************(unused) Encryption system for sensible data****************************/
+// (récupéré du projet péda)
 
 $peremption_purge = 365 ; // en jours
 $encryption_key = "ujT|%`'?v]J~`QoY]h+[!re.`z2Kq~";

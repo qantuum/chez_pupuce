@@ -15,8 +15,8 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<!-- google fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
-		<!-- tentative to use dataTables framework --- does not work へ‿(ツ)‿ㄏ -->
-		<link href='cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet'>
+		<!-- tentative to use dataTables framework --- does not work へ‿(ツ)‿ㄏ, seems that the CDN source expired (uncomment and see console)  -->
+		<!-- <link href='cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet'> -->
 		<!-- Custom styles -->
 		<!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
 	</head>
@@ -71,9 +71,11 @@
 
 
 		</section>
-		<!-- tentative to use dataTables framework --- does not work へ‿(ツ)‿ㄏ -->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<script src='cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'></script>
+		<!-- tentative to use dataTables framework --- does not work へ‿(ツ)‿ㄏ, seems that the CDN source expired (uncomment and see console) -->
+		<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src='cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'></script> -->
+ 
+
 	</body>
 </html>
 

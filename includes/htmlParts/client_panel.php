@@ -52,23 +52,19 @@
 		<div class="row">
 			<div class="col-md-12 list-group-item-primary" style="border:0.025rem solid grey; overflow:scroll; max-height:20rem">
 				<h4 class="h4 text-center mt-4">Mon panier</h4>
-				<ul class="list-group m-3">
-					<li class="list-group-item list-group-item-primary">
-						<div class="d-flex flex-row justify-content-between align-items-baseline">
-							<span>Produit 1</span>
-							<span>12.00</span>
-							<span>€</span>
-							<button type="submit" class="btn btn-sm btn-danger"><span class="fas fa-trash-alt"></span></button>
-						</div>
-					</li>
+				<ul class="list-group m-3" id="ulPanier">
 					<li class="list-group-item list-group-item-info">
 						<div class="d-flex flex-row justify-content-end">
 							<span>Total&emsp;</span>
-							<span>12.00&emsp;</span>
+							<span id="panierTotal">0.00</span>&emsp;
 							<span>€</span>
 						</div>
 					</li>
 				</ul>
+				<form class="form-group" action="./includes/treatments/formSubmit.php" method="post">
+					<input class="btn btn-warning" type="submit" value="Sauvegarder le panier" id="cartSave" name="cartSave">
+					<input class="btn btn-primary" type="submit" value="Passer commande" id="cartGO" name="cartGO">
+				</form>
 			</div>
 		</div>
 		<div class="row">
@@ -86,8 +82,8 @@
 									<img class="card-img-top" src="'.$allProduits[$i]['pupuce_produit_image'].'" alt="Card image cap">
 									<div class="card-body">
 								    	<h4 class="card-title">'.$allProduits[$i]['pupuce_produit_nom'].'</h4>
-								    	<h4 class="card-title">Edité par : '.$allProduits[$i]['pupuce_fournisseur_nom'].'</h4>
-								    	<h5 class="card-title h5">Prix : '.$allProduits[$i]['pupuce_produit_prix'].' €</h5>
+								    	<h4 class="h4">Vendu par : '.$allProduits[$i]['pupuce_fournisseur_nom'].'</h4>
+								    	<h5 class="h5">Prix : <span class="itemPrice">'.$allProduits[$i]['pupuce_produit_prix'].'</span> €</h5>
 								    	<p class="card-text">'.$allProduits[$i]['pupuce_produit_description'].'</p>
 								    	<button class="btnAddProduct btn btn-success btn-sm float-right"><span class="fas fa-star"></span> ZE LE VEU</button>
 									</div>
@@ -103,3 +99,6 @@
 		</div>
 	</div>
 </div>
+<!-- jQuery call -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="./js/events.js"></script>

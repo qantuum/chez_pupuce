@@ -54,11 +54,6 @@ class Fournisseurs extends Personnes implements CRUD {
 		return $res ;
 	}
 
-	public static function dataReadAll($database) {
-		$array = get_database($database)->select(Constants::TABLE_FOURNISSEURS, "*") ;
-		return $array ;
-	}
-
 	// delete the requested data line. The $data['ID'] can be retrieved from instance Employes after a dataRead()
 	public function dataDelete(array $data) {
 		$res = get_database($data['DATABASE'])->delete(Constants::TABLE_FOURNISSEURS, [
@@ -78,6 +73,12 @@ class Fournisseurs extends Personnes implements CRUD {
 			]) ;
 		}
 			return isset($res) ;
+	}
+
+	// this function is static because it is not used in context with the CRUD here
+	public static function dataReadAll($database) {
+		$array = get_database($database)->select(Constants::TABLE_FOURNISSEURS, "*") ;
+		return $array ;
 	}
 
 }

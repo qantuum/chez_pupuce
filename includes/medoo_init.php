@@ -24,6 +24,7 @@ function get_database($database) {
 	return $database ;
 }
 
+
 // constant names
 class Constants {
 	const TABLE_CLIENTS = "pupuce_client" ;
